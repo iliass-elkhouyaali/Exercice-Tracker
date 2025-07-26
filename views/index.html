@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise Tracker</title>
+  <link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏋️ Exercise Tracker</h1>
+
+    <div class="form-container">
+      <form action="/api/users" method="post" class="card">
+        <h2>Create a New User</h2>
+        <code>POST /api/users</code>
+        <input type="text" name="username" placeholder="Username" required />
+        <button type="submit">Submit</button>
+      </form>
+
+      <form action="/api/users/:_id/exercises" method="post" class="card">
+        <h2>Add Exercises</h2>
+        <code>POST /api/users/:_id/exercises</code>
+        <input type="text" name="_id" placeholder="User ID" required />
+        <input type="text" name="description" placeholder="Description*" required />
+        <input type="number" name="duration" placeholder="Duration (mins.)*" required />
+        <input type="date" name="date" placeholder="Date (yyyy-mm-dd)" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <p class="info">
+      <strong>GET user's exercise log:</strong><br />
+      <code>/api/users/:_id/logs?[from][&to][&limit]</code><br />
+      <small>[ ] = optional | <b>from</b>, <b>to</b> = yyyy-mm-dd | <b>limit</b> = number</small>
+    </p>
+  </div>
+</body>
+</html>

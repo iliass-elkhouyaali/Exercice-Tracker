@@ -1,15 +1,18 @@
 {
-  "name": "nodejs",
+  "name": "exercice-tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["API","FCC","FreeCodeCamp","FCC project", "exercice-tracker"],
+  "author": "iliass elkhouyaali",
+  "license": "MIT",
+  "description": "For FCC Exercice Tracker project",
   "dependencies": {
-    "@types/node": "^22.13.11"
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5"
   }
 }
